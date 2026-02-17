@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "按住多选浏览器内文字",
+  "version": "1.0.0",
+  "description": "按住 Alt 拖拽可添加选区，不打断之前的选择，支持跨行多选。",
+  "author": {"email": "17673298578@163.com"},
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "css": ["content.css"],
+    "run_at": "document_idle"
+  }]
+}
